@@ -1,0 +1,73 @@
+import java.io.*;
+import java.util.*;
+
+public class Match{
+
+public static void main(String[] args)
+{
+Scorecard s=new Scorecard();
+Scanner sc=new Scanner(System.in);
+//String a=sc.nextLine();
+//String b=sc.nextLine();
+//int c=sc.nextInt();
+System.out.println("Enter the Team Name");
+s.setTeamname(sc.nextLine());
+System.out.println("Enter Sessions");
+s.setInnings(sc.nextLine());
+System.out.println("Enter runs");
+s.setScore(sc.nextInt());
+s.display();
+}
+}
+
+
+
+import java.util.*;
+import java.io.*;
+
+ public class Scorecard
+{
+private String teamname;
+private String innings;
+private int  score;
+
+public void setTeamname(String team)
+{
+this.teamname=team;
+}
+
+public String getTeamname(){
+return this.teamname;
+}
+public void setInnings(String in)
+{
+this.innings=in;
+}
+public String getInnings(){
+return this.innings;
+}
+public void setScore(int n)
+{
+this.score=n;
+}
+public int getScore()
+{
+return this.score;
+}
+ 
+public void display(){
+
+if(innings.equals("First"))
+{
+System.out.println("Name: "+teamname);
+System.out.println("Scored: "+score);
+System.out.println("Need "+score+"+1 to win the match");
+}
+else 
+{
+System.out.println("Name: "+teamname);
+System.out.println("Scored: "+score);
+System.out.println("Matchended");
+}
+}
+}
